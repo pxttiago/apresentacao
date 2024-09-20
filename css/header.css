@@ -1,0 +1,85 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+header {
+    background-color: #222;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin-right: 1.3em;
+    font-size: 1.5em;
+}
+
+header h1, a {
+    color: #00ffff;
+    transition: 0.2s ease-in-out;
+}
+
+header h1:hover, a:hover {
+    color: #ffffff;
+}
+
+header button {
+    font-weight: 600;
+    background-color: #00ffff;
+    line-height: 50px;
+    height: 40px;
+    text-align: center;
+    width: 170px;
+    cursor: pointer;
+    margin-right: 2.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    transition: all 1.5s;
+    position: relative;
+    border: 0;
+}
+    header button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(255,255,255,0.1);
+        transition: all 0.3s;
+    }
+    header button:hover::before {
+        opacity: 0 ;
+        transform: scale(0.5,0.5);
+    }
+    header button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border: 1.5px solid rgba(255,255,255,0.5);
+        transform: scale(1.2,1.2);
+    }
+    header button:hover::after {
+        opacity: 1;
+        transform: scale(1,1);
+    }

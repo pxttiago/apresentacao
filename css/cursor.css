@@ -1,0 +1,128 @@
+bubles {
+    border-radius: 100%;
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid #00ffff;
+    box-shadow: 0px 0px 15px 0px #00ffff inset;
+    transform: translate(-50%, -50%);
+    animation: colorgen 8s infinite, float 2s infinite;
+}
+
+@keyframes colorgen {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes float {
+    0% {
+        margin-left: -30px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    100% {
+        margin-left: -30px;
+    }
+}
+
+:root {
+    --speed: 10s;
+    --coloring: #20e3a2;
+    --direction: 2000;
+}
+
+@function multiple-box-shadow($n) {
+    $value: "#{random(2000)}px #{random(2000)}px var(--coloring)";
+    @for $i from 2 through $n {
+        $value: "#{$value}, #{random(2000)}px #{random(2000)}px var(--coloring)";
+    }
+    @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(300);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(200);
+
+html {
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #20e3a2 0%, #ba55d3 100%);
+    overflow: hidden;
+}
+
+#bubbles {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: animStar linear infinite;
+    animation-duration: calc(var(--speed) * 6);
+    border-radius: 100%;
+    
+    &:after {
+        content: " ";
+        position: absolute;
+        top: -500px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $shadows-small;
+        border-radius: 100%;
+    }
+}
+
+#bubbles2 {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: animStar linear infinite;
+    animation-duration: calc(var(--speed) * 4);
+    border-radius: 100%;
+    
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 500px;
+        width: 4px;
+        height: 4px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+        border-radius: 100%;
+    }
+}
+
+#bubbles3 {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: animStar linear infinite;
+    animation-duration: calc(var(--speed) * 5);
+    border-radius: 100%;
+    
+    &:after {
+        content: " ";
+        position: absolute;
+        top: -500px;
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        box-shadow: $shadows-big;
+        border-radius: 100%;
+    }
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}

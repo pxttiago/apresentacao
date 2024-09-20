@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/cursor.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/d0beecd102.js" crossorigin="anonymous" defer></script>
+    <script src="js\scripts.js"></script>
+
+</head>
+<body>
+
+    <div id="bubbles"></div> <div id="bubbles2"></div> <div id="bubbles3"></div>
+
+    <header>
+        
+        <h1>Dev. Tiago Peixoto</h1>
+        
+        <nav>
+            <button id="botaoTraduzir" onclick="toggleTranslation()">Traduzir para Inglês</button>
+            <a href="https://github.com/pxttiago" target="_blank"><i class="fa-brands fa-github" style="font-size: 40px;" ></i></a>
+            <a href="https://www.linkedin.com/in/tiago-silva-peixoto-05a74b208/" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 40px; padding-left: 15"></i></a>
+        </nav>
+    
+    </header>
+
+    <main>
+
+        <section class="main-content">
+            <article class="text">
+                <h2>Sobre mim</h2>
+                <p>
+                    Profissional formado em Ciência da Computação, com sólidos conhecimentos em Python e seus frameworks Django e Flask.
+                    Experiência em desenvolvimento web (HTML, CSS, JavaScript, Bootstrap), criação e integração de APIs RESTful.
+                    Domínio em SQL para gerenciamento de dados e Git e GitHub para controle de versionamento e colaboração em projetos de software.
+                    Habilidades em suporte a redes e infraestrutura de TI.<br>
+                    Em busca de novos desafios para aplicar e expandir meus conhecimentos em desenvolvimento de software.
+                </p>
+            </article>
+
+            <aside class="techs">
+                <h2>Tecnologias</h2>
+                <style>
+                    .border-light {
+                        border: 0px solid rgba(255, 255, 255, 0.1);
+                    }
+                </style>
+                <div class="cards-container" style="display: flex;">
+                    <div class="card">
+                        <img src="img/techs/html_logo.png" alt="Logo HTML";>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\css_logo.png" alt="Logo CSS";>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\js_logo.png" alt="Logo JS";>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\bootstrap_logo.png" alt="Logo Bootstrap";>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\python_logo.png" alt="Logo Python">
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\django_logo.png" alt="Logo Django";>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\flask_logo.png" alt="Logo Flask";>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\techs\java_logo.png" alt="Logo Java";>
+                    </div>
+                    
+                </div>
+            </aside>
+
+        </section>
+
+        <figure class="foto-perfil" style="display:flex">
+            <img src="img\foto_tiago.jpg" alt="Imagem de Tiago Peixoto">
+            <figcaption style="text-align: center;">Tiago Silva Peixoto</figcaption>
+        </figure>
+    
+    </main>
+    
+    <footer>
+        <span>
+            &copy; Tiago Silva Peixoto, 2024 - Todos os direitos reservados
+        </span>
+    </footer>
+
+</body>
+</html>
